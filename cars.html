@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Cars - Craney Car Breakers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="logo">
+        <div class="logo-icon">
+            <i class="fas fa-tools"></i>
+        </div>
+        <div class="logo-text">
+            <span class="logo-main">Craney</span>
+            <span class="logo-sub">Car Breakers</span>
+        </div>
+    </div>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="cars.html" class="active"><i class="fas fa-car"></i> Available Cars</a>
+        <a href="sell.html"><i class="fas fa-money-bill-wave"></i> Sell Your Car</a>
+        <a href="services.html"><i class="fas fa-tools"></i> Services</a>
+        <a href="contact.html"><i class="fas fa-phone"></i> Contact</a>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <i class="fas fa-bars"></i>
+    </div>
+</header>
+
+<!-- Page Header -->
+<section class="page-header cars-header">
+    <div class="container">
+        <h1>Available Cars for Stripping</h1>
+        <p>Browse our current inventory of vehicles ready for dismantling. All parts are available - contact us for specific requests.</p>
+        
+        <!-- Enhanced Search & Filters -->
+        <div class="cars-controls">
+            <div class="search-box-cars">
+                <i class="fas fa-search"></i>
+                <input type="text" id="carsSearch" placeholder="Search by make, model, or part...">
+                <button id="carsSearchBtn">Search</button>
+            </div>
+            
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label>Brand:</label>
+                    <select id="brandFilter">
+                        <option value="all">All Brands</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="bmw">BMW</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="honda">Honda</option>
+                        <option value="ford">Ford</option>
+                        <option value="nissan">Nissan</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Condition:</label>
+                    <select id="conditionFilter">
+                        <option value="all">All Conditions</option>
+                        <option value="accident">Accident Damaged</option>
+                        <option value="mechanical">Mechanical Failure</option>
+                        <option value="flood">Flood Damage</option>
+                        <option value="running">Running Condition</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Sort by:</label>
+                    <select id="sortFilter">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="make">Make A-Z</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cars Grid Section -->
+<section class="cars-showcase">
+    <div class="container">
+        <div class="cars-grid-header">
+            <h2 id="carsCount">Available Vehicles</h2>
+            <div class="view-toggle">
+                <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i> Grid</button>
+                <button class="view-btn" data-view="list"><i class="fas fa-list"></i> List</button>
+            </div>
+        </div>
+
+        <div class="cars-grid-enhanced" id="carsContainer">
+            <!-- Car 1 -->
+            <div class="car-listing" data-brand="toyota" data-condition="accident" data-date="2024-01-15">
+                <div class="car-image">
+                    <img src="Images\1763834220683.jpg" alt="Toyota RunX" class="car-main-image" data-car="toyota-harrier">
+                    <div class="car-badges">
+                        <span class="badge new">NEW</span>
+                        <span class="badge condition">Accident</span>
+                    </div>
+                    <div class="car-overlay">
+                        <button class="quick-view" data-car="toyota-harrier">Quick View</button>
+                        <button class="zoom-image" data-car="toyota-harrier">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="car-details">
+                    <div class="car-header">
+                        <h3>Toyota Harrier 3S</h3>
+                        <span class="car-year">2005</span>
+                    </div>
+                    
+                    <div class="car-specs">
+                        <div class="spec-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>85,000 km</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-gas-pump"></i>
+                            <span>Petrol</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-cog"></i>
+                            <span>Automatic</span>
+                        </div>
+                    </div>
+                    
+                    <p class="car-condition-desc">Missing front bumper. Engine and transmission in excellent condition.</p>
+                    
+                    <div class="parts-available">
+                        <h4>Available Parts:</h4>
+                        <div class="parts-tags">
+                            <span class="part-tag">Engine</span>
+                            <span class="part-tag">Transmission</span>
+                            <span class="part-tag">Body Parts</span>
+                            <span class="part-tag">Interior</span>
+                        </div>
+                    </div>
+                    
+                    <div class="car-actions">
+                        <button class="btn-primary" onclick="inquireAboutCar('Toyota  Harrier')">
+                            <i class="fas fa-info-circle"></i> Inquire About Parts
+                        </button>
+                        <div class="action-buttons">
+                            <a href="tel:+26776497944" class="btn-call" title="Call Now">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                            <a href="https://wa.me/26776497944?text=Hi, I'm interested in parts from Toyota Harrier" class="btn-whatsapp" title="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car 2 -->
+            <div class="car-listing" data-brand="bmw" data-condition="mechanical" data-date="2024-01-10">
+                <div class="car-image">
+                    <img src="Images\bmw 320.jpg" alt="BMW 3 Series" class="car-main-image" data-car="bmw-320i">
+                    <div class="car-badges">
+                        <span class="badge condition">Mechanical</span>
+                    </div>
+                    <div class="car-overlay">
+                        <button class="quick-view" data-car="bmw-320i">Quick View</button>
+                        <button class="zoom-image" data-car="bmw-320i">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="car-details">
+                    <div class="car-header">
+                        <h3>BMW 320i 2015</h3>
+                        <span class="car-year">2015</span>
+                    </div>
+                    
+                    <div class="car-specs">
+                        <div class="spec-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>120,000 km</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-gas-pump"></i>
+                            <span>Petrol</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-cog"></i>
+                            <span>Automatic</span>
+                        </div>
+                    </div>
+                    
+                    <p class="car-condition-desc">Engine failure. Excellent body condition with premium interior.</p>
+                    
+                    <div class="parts-available">
+                        <h4>Available Parts:</h4>
+                        <div class="parts-tags">
+                            <span class="part-tag">Electronics</span>
+                            <span class="part-tag">Interior</span>
+                            <span class="part-tag">Body Parts</span>
+                            <span class="part-tag">Wheels</span>
+                        </div>
+                    </div>
+                    
+                    <div class="car-actions">
+                        <button class="btn-primary" onclick="inquireAboutCar('BMW 320i 2015')">
+                            <i class="fas fa-info-circle"></i> Inquire About Parts
+                        </button>
+                        <div class="action-buttons">
+                            <a href="tel:+26776497944" class="btn-call" title="Call Now">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                            <a href="https://wa.me/26776497944?text=Hi, I'm interested in parts from BMW 320i 2015" class="btn-whatsapp" title="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more cars following the same structure -->
+            <!-- Car 3 to Car 6 would go here -->
+            
+        </div>
+
+    <div class="load-more-container">
+    <button id="loadMoreBtn" class="btn">
+        <i class="fas fa-plus"></i> Load More Vehicles
+    </button>
+</div>
+<!-- Image Lightbox Modal -->
+<div class="image-lightbox" id="imageLightbox">
+    <div class="lightbox-content">
+        <span class="close-lightbox">&times;</span>
+        <img src="" alt="" id="lightboxImage">
+        <div class="lightbox-caption">
+            <h3 id="lightboxTitle"></h3>
+            <p id="lightboxDescription"></p>
+        </div>
+        <div class="lightbox-controls">
+            <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</div>
+<!-- Quick View Modal -->
+<div class="quick-view-modal" id="quickViewModal">
+    <div class="quick-view-content">
+        <span class="close close-quick-view">&times;</span>
+        
+        <div class="quick-view-grid">
+            <!-- Images Section -->
+            <div class="quick-view-images">
+                <div class="main-image-container">
+                    <img id="quickViewMainImage" src="" alt="Vehicle Image" class="main-image">
+                </div>
+                <div id="quickViewThumbnails" class="image-thumbnails">
+                    <!-- Thumbnails will be added here -->
+                </div>
+            </div>
+            
+            <!-- Details Section -->
+            <div class="quick-view-details">
+                <div class="vehicle-header">
+                    <h2 id="quickViewTitle">Vehicle Title</h2>
+                    <span id="quickViewYear" class="vehicle-year">Year</span>
+                </div>
+                
+                <div class="vehicle-specs">
+                    <div class="spec-item">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span id="quickViewMileage">Mileage</span>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-gas-pump"></i>
+                        <span id="quickViewFuel">Fuel Type</span>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-cog"></i>
+                        <span id="quickViewTransmission">Transmission</span>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-car"></i>
+                        <span id="quickViewCondition">Condition</span>
+                    </div>
+                </div>
+                
+                <div class="vehicle-description">
+                    <h4>Description</h4>
+                    <p id="quickViewDescription">Vehicle description will appear here.</p>
+                </div>
+                
+                <div class="available-parts">
+                    <h4>Available Parts</h4>
+                    <div id="quickViewParts" class="parts-tags">
+                        <!-- Parts will be added here -->
+                    </div>
+                </div>
+                
+                <div class="quick-view-actions">
+                    <button id="quickViewWhatsApp" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                    </button>
+                    <a href="tel:+26776497944" class="btn-call">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                    <button class="btn-secondary" onclick="closeQuickView()">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+                
+<div class="contact-card-modern">
+    <div class="contact-header-modern">
+        <h2>CONTACT US NOW</h2>
+        <p class="text-enhanced">We're constantly adding new vehicles to our inventory. Contact us with your specific part requirements and we'll help you find it!</p>
+    </div>
+    
+    <div class="contact-info-modern">
+        <div class="contact-icon-modern">
+            <i class="fas fa-phone"></i>
+        </div>
+        <div class="contact-details-modern">
+            <h3>Call Us</h3>
+            <p>Available 24/7 for urgent inquiries</p>
+            <div class="phone-number-modern">+267 764 97944</div>
+        </div>
+    </div>
+    
+    <div class="contact-actions">
+        <button class="btn-modern btn-modern-primary btn-pulse">
+            <i class="fas fa-phone"></i>
+            Call Now
+        </button>
+        <button class="btn-modern btn-modern-whatsapp">
+            <i class="fab fa-whatsapp"></i>
+            WhatsApp
+        </button>
+    </div>
+</div>
+
+<!-- WhatsApp Float Button -->
+<div class="whatsapp-float">
+    <a href="https://wa.me/26776497944" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Craney Car Breakers</h3>
+            <p>Your trusted source for quality second-hand car parts in Botswana</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="cars.html">Available Cars</a>
+            <a href="sell.html">Sell Your Car</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Info</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Gaborone, Botswana</p>
+            <p><i class="fas fa-phone"></i> +267 764 97944</p>
+            <p><i class="fas fa-envelope"></i> info@craneybreakers.co.bw</p>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="https://www.facebook.com/craneyent" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://wa.me/26776497944" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://instagram.com/this.aintkgosi" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Craney Car Breakers. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+    // Image lightbox functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const lightbox = document.getElementById('imageLightbox');
+        const lightboxImg = document.getElementById('lightboxImage');
+        const lightboxTitle = document.getElementById('lightboxTitle');
+        const lightboxDesc = document.getElementById('lightboxDescription');
+        const closeBtn = document.querySelector('.close-lightbox');
+        const prevBtn = document.querySelector('.lightbox-prev');
+        const nextBtn = document.querySelector('.lightbox-next');
+        
+        // Get all car images
+        const carImages = document.querySelectorAll('.car-main-image');
+        const zoomButtons = document.querySelectorAll('.zoom-image');
+        
+        let currentImageIndex = 0;
+        const images = Array.from(carImages);
+        
+        // Open lightbox when clicking image or zoom button
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const img = images[currentImageIndex];
+            const carCard = img.closest('.car-listing');
+            const carTitle = carCard.querySelector('h3').textContent;
+            const carDesc = carCard.querySelector('.car-condition-desc').textContent;
+            
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightboxTitle.textContent = carTitle;
+            lightboxDesc.textContent = carDesc;
+            
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // Event listeners for images
+        carImages.forEach((img, index) => {
+            img.addEventListener('click', () => openLightbox(index));
+        });
+        
+        // Event listeners for zoom buttons
+        zoomButtons.forEach((btn, index) => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openLightbox(index);
+            });
+        });
+        
+        // Close lightbox
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close when clicking outside image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Navigation
+        prevBtn.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            openLightbox(currentImageIndex);
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            openLightbox(currentImageIndex);
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.style.display === 'flex') {
+                if (e.key === 'Escape') {
+                    lightbox.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                } else if (e.key === 'ArrowLeft') {
+                    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+                    openLightbox(currentImageIndex);
+                } else if (e.key === 'ArrowRight') {
+                    currentImageIndex = (currentImageIndex + 1) % images.length;
+                    openLightbox(currentImageIndex);
+                }
+            }
+        });
+    });
+</script>
+<script>
+    // Global lightbox re-initialization function
+    function reinitializeLightbox() {
+        const lightbox = document.getElementById('imageLightbox');
+        const lightboxImg = document.getElementById('lightboxImage');
+        const lightboxTitle = document.getElementById('lightboxTitle');
+        const lightboxDesc = document.getElementById('lightboxDescription');
+        const closeBtn = document.querySelector('.close-lightbox');
+        const prevBtn = document.querySelector('.lightbox-prev');
+        const nextBtn = document.querySelector('.lightbox-next');
+        
+        if (!lightbox) return;
+        
+        let currentImageIndex = 0;
+        let images = [];
+        
+        function updateImages() {
+            images = Array.from(document.querySelectorAll('.car-main-image'));
+        }
+        
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const img = images[currentImageIndex];
+            const carCard = img.closest('.car-listing');
+            const carTitle = carCard.querySelector('h3').textContent;
+            const carDesc = carCard.querySelector('.car-condition-desc').textContent;
+            
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightboxTitle.textContent = carTitle;
+            lightboxDesc.textContent = carDesc;
+            
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // Update images list
+        updateImages();
+        
+        // Close lightbox
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close when clicking outside image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Navigation
+        prevBtn.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            openLightbox(currentImageIndex);
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            openLightbox(currentImageIndex);
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.style.display === 'flex') {
+                if (e.key === 'Escape') {
+                    lightbox.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                } else if (e.key === 'ArrowLeft') {
+                    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+                    openLightbox(currentImageIndex);
+                } else if (e.key === 'ArrowRight') {
+                    currentImageIndex = (currentImageIndex + 1) % images.length;
+                    openLightbox(currentImageIndex);
+                }
+            }
+        });
+        
+        // Re-export for global access
+        window.reinitializeLightbox = reinitializeLightbox;
+    }
+    
+    // Call this after Load More to update lightbox
+    window.updateLightbox = function() {
+        reinitializeLightbox();
+    };
+</script>
+</body>
+</html>

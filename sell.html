@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Car - Craney Car Breakers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="logo">
+        <div class="logo-icon">
+            <i class="fas fa-tools"></i>
+        </div>
+        <div class="logo-text">
+            <span class="logo-main">Craney</span>
+            <span class="logo-sub">Car Breakers</span>
+        </div>
+    </div>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="cars.html"><i class="fas fa-car"></i> Available Cars</a>
+        <a href="sell.html" class="active"><i class="fas fa-money-bill-wave"></i> Sell Your Car</a>
+        <a href="services.html"><i class="fas fa-tools"></i> Services</a>
+        <a href="contact.html"><i class="fas fa-phone"></i> Contact</a>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <i class="fas fa-bars"></i>
+    </div>
+</header>
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>Sell Your Car for Cash Today</h1>
+        <p>Get top prices for your old, damaged, or unused vehicle. We buy cars of any condition!</p>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits">
+    <div class="container">
+        <h2>Why Sell to Craney Car Breakers?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <h3>Instant Cash Payment</h3>
+                <p>Get paid on the spot when we collect your vehicle</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h3>Free Towing Service</h3>
+                <p>We provide free collection anywhere in Botswana</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-file-contract"></i>
+                </div>
+                <h3>Hassle-Free Paperwork</h3>
+                <p>We handle all the documentation and transfer processes</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-car-crash"></i>
+                </div>
+                <h3>Any Condition Accepted</h3>
+                <p>Accident damaged, mechanical issues, or just old - we want it!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sell Form Section -->
+<section class="sell-form-section">
+    <div class="container">
+        <div class="form-container">
+            <div class="form-header">
+                <h2>Get Your Free Valuation</h2>
+                <p>Fill out the form below and we'll contact you with a cash offer within 2 hours!</p>
+            </div>
+            
+            <form class="sell-form" id="sellForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address">
+                </div>
+
+                <div class="form-group">
+                    <label for="carMake">Car Make *</label>
+                    <select id="carMake" name="carMake" required>
+                        <option value="">Select Make</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Mercedes-Benz">Mercedes-Benz</option>
+                        <option value="Honda">Honda</option>
+                        <option value="Ford">Ford</option>
+                        <option value="Nissan">Nissan</option>
+                        <option value="Volkswagen">Volkswagen</option>
+                        <option value="Audi">Audi</option>
+                        <option value="Hyundai">Hyundai</option>
+                        <option value="Kia">Kia</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="carModel">Car Model *</label>
+                    <input type="text" id="carModel" name="carModel" required placeholder="e.g., Hilux, 3 Series, Civic">
+                </div>
+
+                <div class="form-group">
+                    <label for="carYear">Year *</label>
+                    <input type="number" id="carYear" name="carYear" required placeholder="e.g., 2018" min="1990" max="2024">
+                </div>
+
+                <div class="form-group">
+                    <label for="mileage">Mileage (km) *</label>
+                    <input type="number" id="mileage" name="mileage" required placeholder="e.g., 85000">
+                </div>
+
+                <div class="form-group">
+                    <label for="condition">Vehicle Condition *</label>
+                    <select id="condition" name="condition" required>
+                        <option value="">Select Condition</option>
+                        <option value="Running - Good Condition">Running - Good Condition</option>
+                        <option value="Mechanical Issues">Mechanical Issues</option>
+                        <option value="Accident Damaged">Accident Damaged</option>
+                        <option value="Flood Damaged">Flood Damaged</option>
+                        <option value="Engine Problems">Engine Problems</option>
+                        <option value="Transmission Issues">Transmission Issues</option>
+                        <option value="Not Running">Not Running</option>
+                        <option value="Scrap/For Parts">Scrap/For Parts</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Your Location *</label>
+                    <input type="text" id="location" name="location" required placeholder="e.g., Gaborone, Francistown, Maun">
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="description">Additional Details</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Describe any issues, recent repairs, or special features..."></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                    <label class="checkbox-label">
+                        <input type="checkbox" required>
+                        <span>I agree to be contacted by Craney Car Breakers regarding my vehicle valuation</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-large submit-btn">
+                    <i class="fas fa-paper-plane"></i> Get My Cash Offer
+                </button>
+            </form>
+        </div>
+
+        <div class="quick-contact">
+            <h3>Prefer to Talk Directly?</h3>
+            <div class="contact-options">
+                <a href="tel:+26776497944" class="contact-option">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong>Call Us Now</strong>
+                        <span>+267 764 97944</span>
+                    </div>
+                </a>
+                <a href="https://wa.me/26776497944" class="contact-option" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <strong>WhatsApp Us</strong>
+                        <span>Send photos & details</span>
+                    </div>
+                </a>
+                <div class="contact-option">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Visit Our Yard</strong>
+                        <span>Gaborone, Botswana</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section class="process">
+    <div class="container">
+        <h2>Our Simple Selling Process</h2>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3>Contact Us</h3>
+                <p>Fill out the form or call us with your car details</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3>Get Valuation</h3>
+                <p>Receive a fair cash offer within 2 hours</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3>We Collect</h3>
+                <p>Free towing service at your convenience</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h3>Get Paid</h3>
+                <p>Instant cash payment on collection</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Types We Buy -->
+<section class="types-we-buy">
+    <div class="container">
+        <h2>We Buy All Types of Vehicles</h2>
+        <div class="vehicle-types">
+            <div class="vehicle-type">
+                <i class="fas fa-car-crash"></i>
+                <h4>Accident Damaged</h4>
+                <p>Front/rear impacts, side collisions</p>
+            </div>
+            <div class="vehicle-type">
+                <i class="fas fa-cog"></i>
+                <h4>Mechanical Issues</h4>
+                <p>Engine, transmission, or other failures</p>
+            </div>
+            <div class="vehicle-type">
+                <i class="fas fa-tint"></i>
+                <h4>Flood Damaged</h4>
+                <p>Water damage, electrical issues</p>
+            </div>
+            <div class="vehicle-type">
+                <i class="fas fa-car-battery"></i>
+                <h4>Not Running</h4>
+                <p>Won't start, electrical problems</p>
+            </div>
+            <div class="vehicle-type">
+                <i class="fas fa-check-circle"></i>
+                <h4>Running Vehicles</h4>
+                <p>Good condition but unwanted</p>
+            </div>
+            <div class="vehicle-type">
+                <i class="fas fa-recycle"></i>
+                <h4>Scrap Vehicles</h4>
+                <p>Old, unused, or end-of-life cars</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WhatsApp Float Button -->
+<div class="whatsapp-float">
+    <a href="https://wa.me/26776497944" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Craney Car Breakers</h3>
+            <p>Your trusted source for quality second-hand car parts in Botswana</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="cars.html">Available Cars</a>
+            <a href="sell.html">Sell Your Car</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Info</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Gaborone, Botswana</p>
+            <p><i class="fas fa-phone"></i> +267 764 97944</p>
+            <p><i class="fas fa-envelope"></i> info@craneybreakers.co.bw</p>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="https://www.facebook.com/craneyent" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://wa.me/26776497944" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://instagram.com/this.aintkgosi" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Craney Car Breakers. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+    // Form submission handling - Sends to WhatsApp
+    document.getElementById('sellForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(this);
+        
+        // Create a detailed message for WhatsApp
+        const message = `🚗 *NEW CAR SELLING INQUIRY* 🚗
+
+*Customer Details:*
+👤 Name: ${formData.get('fullName')}
+📞 Phone: ${formData.get('phone')}
+📧 Email: ${formData.get('email') || 'Not provided'}
+
+*Vehicle Details:*
+🚙 Car: ${formData.get('carMake')} ${formData.get('carModel')} (${formData.get('carYear')})
+📊 Mileage: ${formData.get('mileage')} km
+🔧 Condition: ${formData.get('condition')}
+📍 Location: ${formData.get('location')}
+
+*Additional Details:*
+${formData.get('description') || 'No additional details provided'}
+
+*Urgent:* Please contact this customer within 2 hours with a cash offer!`;
+
+        // Encode the message for URL
+        const encodedMessage = encodeURIComponent(message);
+        
+        // Create WhatsApp URL
+        const whatsappUrl = `https://wa.me/26776497944?text=${encodedMessage}`;
+        
+        // Show confirmation to user
+        const userMessage = `Thank you ${formData.get('fullName')}! We're opening WhatsApp to send your ${formData.get('carMake')} ${formData.get('carModel')} details directly to us. Please click send to complete your inquiry.`;
+        
+        alert(userMessage);
+        
+        // Open WhatsApp with pre-filled message
+        window.open(whatsappUrl, '_blank');
+        
+        // Optional: Reset form after a delay
+        setTimeout(() => {
+            this.reset();
+        }, 2000);
+    });
+
+    // SIMPLE phone number validation without auto-formatting
+    document.getElementById('phone').addEventListener('blur', function(e) {
+        const phone = e.target.value.replace(/\D/g, ''); // Remove non-digits
+        if (phone.length < 7) {
+            alert('Please enter a valid phone number with at least 7 digits');
+            e.target.focus();
+        }
+    });
+
+    // Auto-format year input
+    document.getElementById('carYear').addEventListener('input', function(e) {
+        const year = e.target.value;
+        if (year.length === 4) {
+            const currentYear = new Date().getFullYear();
+            if (year < 1990 || year > currentYear) {
+                e.target.setCustomValidity(`Please enter a year between 1990 and ${currentYear}`);
+            } else {
+                e.target.setCustomValidity('');
+            }
+        }
+    });
+
+    // Show loading state on form submission
+    document.getElementById('sellForm').addEventListener('submit', function() {
+        const submitBtn = this.querySelector('.submit-btn');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
+        
+        setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }, 3000);
+    });
+</script></body>
+</html>
